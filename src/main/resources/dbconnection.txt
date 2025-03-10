@@ -1,0 +1,20 @@
+# Specify the PostgreSQL driver (optional, Spring Boot auto-detects it usually)
+# spring.datasource.driver-class-name=org.postgresql.Driver
+
+
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#enabling the H2 console
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2-console
+#spring.h2.console.settings.trace=false
+#spring.h2.console.settings.web-allow-others=false
+
+#spring.datasource.url=jdbc:h2:mem:appV1;
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=sa
+
+# PostgreSQL database connection
+# spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+# spring.datasource.username=postgres
+# spring.datasource.password=password

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: delete-table-1
+      author: Nijat
+      changes:
+        - dropTable:
+            tableName: product_images

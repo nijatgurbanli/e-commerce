@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: postgres-db
+    image: postgres:latest
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: mms
+      POSTGRES_PASSWORD: mms
+      POSTGRES_DB: my-project-db
+  webapp:
+    image: shopping:1.0
+    restart: always
+    ports:
+      - "8086:8080"
+    depends_on:
+      - db
+    environment:
+      DB_CONNECTION_IP: db
+volumes:
+  db_data:
